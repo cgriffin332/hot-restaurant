@@ -14,24 +14,24 @@ app.get("/api/students", (req, res) => {
       return res.status(500).json({
         error: true,
         data: null,
-        Message: "Unable to retrieve students.",
+        message: "Unable to retrieve students.",
       });
     }
     res.json({
       error: false,
       data: JSON.parse(data),
-      Message: "Successfully retrieved new students.",
+      message: "Successfully retrieved students.",
     });
   });
 });
 
 app.post("/api/students", (req, res) => {
   console.log(req.body);
-  if (!req.body.name || !req.body.note || !req.body.grade) {
+  if (!req.body.name || !req.body.grade) {
     return res.status(400).json({
       error: true,
       data: null,
-      Message: "Invalid student. Please reformat and try again",
+      message: "Invalid student. Please reformat and try again.",
     });
   }
   fs.readFile("./students.json", "utf-8", (err, data) => {
@@ -40,7 +40,7 @@ app.post("/api/students", (req, res) => {
       return res.status(500).json({
         error: true,
         data: null,
-        Message: "Unable to retrieve student.",
+        message: "Unable to retrieve students.",
       });
     }
     const updatedData = JSON.parse(data);
@@ -51,13 +51,13 @@ app.post("/api/students", (req, res) => {
         return res.status(500).json({
           error: true,
           data: null,
-          Message: "Unable to save new student.",
+          message: "Unable to save new student.",
         });
       }
       res.json({
         error: false,
         data: updatedData,
-        Message: "Successfully added new student.",
+        message: "Successfully added new student.",
       });
     });
   });

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Billy",
+    "note": "Billy is dumb!",
+    "grade": "4th Grade"
+  },
+  {
+    "name": "Sally",
+    "note": "Great student!",
+    "grade": "4th Grade"
+  },
+  {
+    "name": "Ashley",
+    "note": "Poops a lot!",
+    "grade": "4th Grade"
+  },
+  {
+    "name": "Fred",
+    "note": "Eats garbage!",
+    "grade": "4th Grade"
+  },
+  {
+    "name": "Jossie",
+    "note": "Shes is a cat!",
+    "grade": "4th Grade"
+  },
+  {
+    "name": "Gus",
+    "note": "Great!",
+    "grade": "4th Grade"
+  }
+]
